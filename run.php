@@ -41,7 +41,7 @@ $api = file_get_contents("https://api.namefake.com/indonesian-indonesia/");
 $j = json_decode($api, true);
 $user = $j['username'];
 $nmr = rand(00000,99999);
-$dat = array("Account" => "$user", "Password" => "akunweb123", "Flag" =>"$reff", "PhoneNo" => "87841174$rand");
+$dat = array("Account" => "$user", "Password" => "akunweb123", "Flag" =>"$reff", "PhoneNo" => "87841174$nmr');
 $data = json_encode($dat);
 $cok = getcok("https://web.apg9.com/api/AppService/AddUserInfo", $ua);
 $send = curl("https://web.apg9.com/api/AppService/AddUserInfo", $ua, $data);
